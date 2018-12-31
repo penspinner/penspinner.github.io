@@ -26,7 +26,7 @@ const Blackboard = styled.div`
   width: 100%;
 `;
 
-const Notes = () => (
+const ThingsAboutMeBlackboard = () => (
   <Blackboard>
     <h1>Things about me</h1>
     <Chalk style={{ left: '75%', height: '5px', width: '25px' }} />
@@ -53,4 +53,4 @@ const Notes = () => (
   </Blackboard>
 );
 
-export default Notes;
+export default ThingsAboutMeBlackboard;

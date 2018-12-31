@@ -4,7 +4,7 @@ import { Grid, Image } from 'semantic-ui-react';
 import Centered from '../components/Centered';
 import Icons from '../components/Icons';
 import Layout from '../components/Layout';
-import Notes from '../components/Notes';
+import ThingsAboutMeBlackboard from '../components/ThingsAboutMeBlackboard';
 
 import deskImageSrc from '../images/desk.jpg';
 import meCompImageSrc from '../images/me_comp.jpg';
@@ -26,7 +26,7 @@ const IndexPage = () => (
           <Image fluid src={meCompImageSrc} />
         </Grid.Column>
         <Grid.Column>
-          <Notes />
+          <ThingsAboutMeBlackboard />
         </Grid.Column>
       </Grid.Row>
     </Grid>

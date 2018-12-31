@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Grid, Icon } from 'semantic-ui-react';
 
+import Audio from './Audio';
+
 const StyledGrid = styled(Grid)`
   background-color: var(--dark-green);
   text-align: center;
@@ -33,13 +35,13 @@ const ShakeIcon = styled(Icon)`
 const Footer = () => (
   <StyledGrid as="footer" textAlign="center">
     <Grid.Row>
-      <audio controls preload="none" id="footer_audio">
+      <Audio controls>
         <source
           src="https://docs.google.com/uc?export=download&id=0B-eyIPPQbnF-WWcwUlIzT0JBWE0"
           type="audio/mpeg"
         />
         Your browser does not support the audio tag.
-      </audio>
+      </Audio>
     </Grid.Row>
     <Grid.Row>
       <span>&copy; Copyright Steven Liao. 2016-present. All rights reserved. Made with </span>

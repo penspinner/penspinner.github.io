@@ -4,9 +4,8 @@ import { Grid, Icon } from 'semantic-ui-react';
 
 import Audio from './Audio';
 
-const StyledGrid = styled(Grid)`
+const StyledFooter = styled.footer`
   background-color: var(--dark-green);
-  text-align: center;
 `;
 
 const growBigger = keyframes`50%{ transform: scale(1.2); }`;
@@ -33,27 +32,29 @@ const ShakeIcon = styled(Icon)`
 `;
 
 const Footer = () => (
-  <StyledGrid as="footer" textAlign="center">
-    <Grid.Row>
-      <Audio controls>
-        <source
-          src="https://docs.google.com/uc?export=download&id=0B-eyIPPQbnF-WWcwUlIzT0JBWE0"
-          type="audio/mpeg"
-        />
-        Your browser does not support the audio tag.
-      </Audio>
-    </Grid.Row>
-    <Grid.Row>
-      <span>&copy; Copyright Steven Liao. 2016-present. All rights reserved. Made with </span>
-      &nbsp;
-      <GrowBiggerIcon color="pink" fitted name="heart" />
-      &nbsp;
-      <TeardropIcon color="blue" fitted name="tint" />
-      &nbsp;
-      <ShakeIcon color="teal" fitted name="food" />
-      &nbsp; .
-    </Grid.Row>
-  </StyledGrid>
+  <StyledFooter>
+    <Grid textAlign="center">
+      <Grid.Row>
+        <Audio controls>
+          <source
+            src="https://docs.google.com/uc?export=download&id=0B-eyIPPQbnF-WWcwUlIzT0JBWE0"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio tag.
+        </Audio>
+      </Grid.Row>
+      <Grid.Row>
+        <span>&copy; Copyright Steven Liao. 2016-present. All rights reserved. Made with </span>
+        &nbsp;
+        <GrowBiggerIcon color="pink" fitted name="heart" />
+        &nbsp;
+        <TeardropIcon color="blue" fitted name="tint" />
+        &nbsp;
+        <ShakeIcon color="teal" fitted name="food" />
+        &nbsp; .
+      </Grid.Row>
+    </Grid>
+  </StyledFooter>
 );
 
 export default Footer;

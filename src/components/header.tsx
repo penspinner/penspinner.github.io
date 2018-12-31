@@ -4,7 +4,7 @@ import { Grid } from 'semantic-ui-react';
 import styled from 'styled-components';
 import Logo from './logo';
 
-const StyledGrid = styled(Grid)`
+const StyledHeader = styled.header`
   background-color: var(--dark-green);
   padding: 1rem;
 `;
@@ -31,14 +31,15 @@ const StyledGrid = styled(Grid)`
 // `;
 
 const Header = () => (
-  <StyledGrid as="header">
-    <Grid.Row verticalAlign="middle">
-      <Grid.Column width="12">
-        <Link to="/">
-          <Logo width="75px" />
-        </Link>
-      </Grid.Column>
-      {/* <Grid.Column width="4">
+  <StyledHeader>
+    <Grid>
+      <Grid.Row verticalAlign="middle">
+        <Grid.Column width="12">
+          <Link to="/">
+            <Logo width="75px" />
+          </Link>
+        </Grid.Column>
+        {/* <Grid.Column width="4">
           <Grid columns="equal">
             <Grid.Column>
               <LinkItem to="/">Resume</LinkItem>
@@ -51,8 +52,9 @@ const Header = () => (
             </Grid.Column>
           </Grid>
         </Grid.Column> */}
-    </Grid.Row>
-  </StyledGrid>
+      </Grid.Row>
+    </Grid>
+  </StyledHeader>
 );
 
 export default Header;

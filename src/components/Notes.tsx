@@ -20,6 +20,7 @@ const Blackboard = styled.div`
   background: linear-gradient(to right, black, var(--chalk-gray) 50%, black) !important;
   border: 10px solid var(--silver);
   color: var(--beige-green);
+  height: 100%;
   padding: 5%;
   position: relative;
   width: 100%;

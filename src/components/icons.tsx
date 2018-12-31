@@ -1,28 +1,28 @@
 import React from 'react';
-import { Icon } from 'semantic-ui-react';
+import { Grid, Icon } from 'semantic-ui-react';
 
 import withNewTab from './withNewTab';
 
 const NewTabA = withNewTab('a');
 
 const Icons = () => (
-  <ul className="icons">
-    <li>
+  <Grid columns="equal">
+    <Grid.Column>
       <NewTabA href="https://github.com/penspinner" title="GitHub">
-        <Icon name="github square" />
+        <Icon name="github square" size="big" />
       </NewTabA>
-    </li>
-    <li>
+    </Grid.Column>
+    <Grid.Column>
       <NewTabA href="https://linkedin.com/in/stliao" title="LinkedIn">
-        <Icon name="linkedin square" />
+        <Icon name="linkedin square" size="big" />
       </NewTabA>
-    </li>
-    <li>
+    </Grid.Column>
+    <Grid.Column>
       <NewTabA href="https://youtube.com/32309" title="YouTube">
-        <Icon name="youtube square" />
+        <Icon name="youtube square" size="big" />
       </NewTabA>
-    </li>
-  </ul>
+    </Grid.Column>
+  </Grid>
 );
 
 export default Icons;

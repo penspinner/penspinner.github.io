@@ -1,61 +1,57 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Grid, Icon } from 'semantic-ui-react';
 
-import withNewTab from './withNewTab';
-
-const FooterWrapper = styled.footer`
+const StyledGrid = styled(Grid)`
   background-color: var(--dark-green);
   text-align: center;
 `;
 
-const Anchor = styled.a`
-  color: var(--light-green);
-  text-decoration: underline;
+const growBigger = keyframes`50%{ transform: scale(1.2); }`;
+const GrowBiggerIcon = styled(Icon)`
+  animation: ${growBigger} 1s infinite;
 `;
 
-const NewTabAnchor = withNewTab(Anchor);
+const teardrop = keyframes`
+  0% { transform: translateY(-5px); opacity: 0.1; }
+  50% { opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0.1; }
+`;
+const TeardropIcon = styled(Icon)`
+  animation: ${teardrop} 2s infinite;
+`;
+
+const shake = keyframes`
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(20deg); }
+  100% { transform: rotate(-20deg); }
+`;
+const ShakeIcon = styled(Icon)`
+  animation: ${shake} 1s infinite;
+`;
 
 const Footer = () => (
-  <FooterWrapper>
-    <audio controls preload="none" id="footer_audio">
-      <source
-        src="https://docs.google.com/uc?export=download&id=0B-eyIPPQbnF-WWcwUlIzT0JBWE0"
-        type="audio/mpeg"
-      />
-      Your browser does not support the audio tag.
-    </audio>
-
-    <Grid textAlign="center">
-      <Grid.Row>
-        <Grid.Column width="2">
-          <NewTabAnchor href="https://www.github.com/penspinner">GitHub</NewTabAnchor>
-        </Grid.Column>
-        <Grid.Column width="2">
-          <NewTabAnchor href="https://www.linkedin.com/in/stliao">LinkedIn</NewTabAnchor>
-        </Grid.Column>
-        <Grid.Column width="2">
-          <NewTabAnchor href="https://myanimelist.net/animelist/2ezpz2plzme">
-            MyAnimeList
-          </NewTabAnchor>
-        </Grid.Column>
-        <Grid.Column width="2">
-          <NewTabAnchor href="http://www.youtube.com/32309">YouTube</NewTabAnchor>
-        </Grid.Column>
-      </Grid.Row>
-
-      <Grid.Row>
-        <span>&copy; Copyright Steven Liao. 2016-present. All rights reserved. Made with </span>
-        &nbsp;
-        <Icon color="pink" fitted name="heart" />
-        &nbsp;
-        <Icon color="blue" fitted name="tint" />
-        &nbsp;
-        <Icon color="teal" fitted name="food" />
-        &nbsp; .
-      </Grid.Row>
-    </Grid>
-  </FooterWrapper>
+  <StyledGrid as="footer" textAlign="center">
+    <Grid.Row>
+      <audio controls preload="none" id="footer_audio">
+        <source
+          src="https://docs.google.com/uc?export=download&id=0B-eyIPPQbnF-WWcwUlIzT0JBWE0"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio tag.
+      </audio>
+    </Grid.Row>
+    <Grid.Row>
+      <span>&copy; Copyright Steven Liao. 2016-present. All rights reserved. Made with </span>
+      &nbsp;
+      <GrowBiggerIcon color="pink" fitted name="heart" />
+      &nbsp;
+      <TeardropIcon color="blue" fitted name="tint" />
+      &nbsp;
+      <ShakeIcon color="teal" fitted name="food" />
+      &nbsp; .
+    </Grid.Row>
+  </StyledGrid>
 );
 
 export default Footer;

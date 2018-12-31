@@ -14,8 +14,8 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-plugin-typescript": "^2.0.3",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "react-grid-layout": "^0.16.6",
     "react-helmet": "^5.2.0",
     "semantic-ui-css": "^2.4.0",
@@ -45,6 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Penspinner/penspinner.github.io"
   }
 }

@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   background-color: var(--dark-green);
 `;
 
-const TranparentFormInput = styled(Form.Input)`
+const TransparentFormInput = styled(Form.Input)`
   input {
     background: transparent !important;
     border: none !important;
@@ -82,7 +82,7 @@ const Footer = () => {
           </Grid.Row>
         ) : (
           <Form onSubmit={handleFormSubmit}>
-            <TranparentFormInput onChange={handleInputChange} value={inputValue} />
+            <TransparentFormInput onChange={handleInputChange} value={inputValue} />
           </Form>
         )}
         <Grid.Row>

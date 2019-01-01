@@ -1,12 +1,11 @@
 import React from 'react';
 
 interface IAudioProps extends React.AudioHTMLAttributes<HTMLAudioElement> {
-  children: React.ReactNode;
   initialVolume: number;
 }
 
-const Audio = ({ children, initialVolume, ...otherProps }: IAudioProps) => {
-  const audioRef = React.createRef<HTMLAudioElement>();
+const Audio = ({ initialVolume, ...otherProps }: IAudioProps) => {
+  const audioRef = React.useRef<HTMLAudioElement>(null);
 
   React.useEffect(() => {
     if (audioRef.current) {
@@ -14,11 +13,7 @@ const Audio = ({ children, initialVolume, ...otherProps }: IAudioProps) => {
     }
   }, []);
 
-  return (
-    <audio {...otherProps} ref={audioRef}>
-      {children}
-    </audio>
-  );
+  return <audio {...otherProps} ref={audioRef} />;
 };
 
 Audio.defaultProps = {

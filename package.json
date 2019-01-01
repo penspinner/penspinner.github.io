@@ -31,10 +31,15 @@
     "develop": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@types/jest": "^23.3.11",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-gatsby": "^0.1.6",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.0.1",
@@ -43,7 +48,12 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.15.3"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "react-testing-library": "^5.4.2",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
   },
   "repository": {
     "type": "git",

@@ -29,7 +29,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "yarn test && gatsby build && gh-pages -d public -b master",
     "format": "prettier --write '**/*.js'",
     "test": "jest"
   },

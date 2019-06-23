@@ -11,16 +11,13 @@ const Centered = ({ children, heightOffset, widthOffset, ...props }: ICenteredPr
   const [height, setHeight] = React.useState(0);
   const [width, setWidth] = React.useState(0);
 
-  React.useEffect(
-    () => {
-      if (ref.current) {
-        const { height, width } = ref.current.getBoundingClientRect();
-        setHeight(height);
-        setWidth(width);
-      }
-    },
-    [width],
-  );
+  React.useEffect(() => {
+    if (ref.current) {
+      const boundingClientRect = ref.current.getBoundingClientRect();
+      setHeight(boundingClientRect.height);
+      setWidth(boundingClientRect.width);
+    }
+  }, [width]);
 
   return (
     <div

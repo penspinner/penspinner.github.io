@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Grid } from 'semantic-ui-react';
 import styled from 'styled-components';
-import Logo from './logo';
+import Logo from './Logo';
 
 const StyledHeader = styled.header`
   background-color: var(--dark-green);
